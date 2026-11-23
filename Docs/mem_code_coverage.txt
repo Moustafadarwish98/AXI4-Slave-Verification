@@ -1,0 +1,140 @@
+QuestaSim-64 vcover 10.7c Coverage Utility 2018.08 Aug 18 2018
+Start time: 11:56:32 on Sep 07,2026
+vcover report -details -instance /axi_top/dut/mem_inst -codeAll cov.ucdb 
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /axi_top/dut/mem_inst
+=== Design Unit: work.axi4_memory
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            7         7         0    100.00
+
+================================Statement Details================================
+
+Statement Coverage for instance /axi_top/dut/mem_inst --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File axi_memory.v
+    1                                                module axi4_memory #(
+    2                                                    parameter DATA_WIDTH = 32,
+    3                                                    parameter ADDR_WIDTH = 10,    // For 1024 locations
+    4                                                    parameter DEPTH = 1024
+    5                                                )(
+    6                                                    input  wire                     clk,
+    7                                                    input  wire                     rst_n,
+    8                                                    
+    9                                                    input  wire                     mem_en,
+    10                                                   input  wire                     mem_we,
+    11                                                   input  wire [ADDR_WIDTH-1:0]    mem_addr,
+    12                                                   input  wire [DATA_WIDTH-1:0]    mem_wdata,
+    13                                                   output reg  [DATA_WIDTH-1:0]    mem_rdata
+    14                                               );
+    15                                               
+    16                                                   // Memory array
+    17                                                   reg [DATA_WIDTH-1:0] memory [0:DEPTH-1];
+    18                                                   
+    19                                                   
+    20                                                   integer j;
+    21                                                   
+    22                                                   // Memory write
+    23              1                     285403         always @(posedge clk) begin
+    24                                                       if (!rst_n) // Fixed from rst_n to !rst_n
+    25              1                       3149                 mem_rdata <= 0;
+    26                                                       else if (mem_en) begin
+    27                                                           if (mem_we)
+    28              1                     104310                     memory[mem_addr] <= mem_wdata;
+    29                                                            else 
+    30              1                      60604                    mem_rdata <= memory[mem_addr]; //Fixed from  memory[mem_addr-1] to memory[mem_addr];
+    31                                                       end
+    32                                                   end
+    33                                                   // Initialize memory
+    34                                                   initial begin
+    35              1                          1             for (j = 0; j < DEPTH; j = j + 1)
+    35              2                       1024     
+    36              1                       1024                 memory[j] = 0;
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         5         5         0    100.00
+
+================================Branch Details================================
+
+Branch Coverage for instance /axi_top/dut/mem_inst
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File axi_memory.v
+------------------------------------IF Branch------------------------------------
+    24                                    285403     Count coming in to IF
+    24              1                       3149             if (!rst_n) // Fixed from rst_n to !rst_n
+    26              1                     164914             else if (mem_en) begin
+                                          117340     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    27                                    164914     Count coming in to IF
+    27              1                     104310                 if (mem_we)
+    29              1                      60604                  else 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    220       156        64     70.90
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /axi_top/dut/mem_inst --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                             j[31]           0           0        0.00 
+                                             j[30]           0           0        0.00 
+                                             j[29]           0           0        0.00 
+                                             j[28]           0           0        0.00 
+                                             j[27]           0           0        0.00 
+                                             j[26]           0           0        0.00 
+                                             j[25]           0           0        0.00 
+                                             j[24]           0           0        0.00 
+                                             j[23]           0           0        0.00 
+                                             j[22]           0           0        0.00 
+                                             j[21]           0           0        0.00 
+                                             j[20]           0           0        0.00 
+                                             j[19]           0           0        0.00 
+                                             j[18]           0           0        0.00 
+                                             j[17]           0           0        0.00 
+                                             j[16]           0           0        0.00 
+                                             j[15]           0           0        0.00 
+                                             j[14]           0           0        0.00 
+                                             j[13]           0           0        0.00 
+                                             j[12]           0           0        0.00 
+                                             j[11]           0           0        0.00 
+                                             j[10]           0           0        0.00 
+                                              j[9]           0           0        0.00 
+                                              j[8]           0           0        0.00 
+                                              j[7]           0           0        0.00 
+                                              j[6]           0           0        0.00 
+                                              j[5]           0           0        0.00 
+                                              j[4]           0           0        0.00 
+                                              j[3]           0           0        0.00 
+                                              j[2]           0           0        0.00 
+                                              j[1]           0           0        0.00 
+                                              j[0]           0           0        0.00 
+
+Total Node Count     =        110 
+Toggled Node Count   =         78 
+Untoggled Node Count =         32 
+
+Toggle Coverage      =      70.90% (156 of 220 bins)
+
+
+Total Coverage By Instance (filtered view): 90.30%
+
+End time: 11:56:32 on Sep 07,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

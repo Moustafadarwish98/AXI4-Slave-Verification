@@ -1,0 +1,322 @@
+QuestaSim-64 vcover 10.7c Coverage Utility 2018.08 Aug 18 2018
+Start time: 11:56:32 on Sep 07,2026
+vcover report -details -cvg cov.ucdb 
+COVERGROUP COVERAGE:
+-----------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal    Status               
+                                                                                              
+-----------------------------------------------------------------------------------------------
+ TYPE /mem_coverage_pkg/mem_coverage/mem_cg           100.00%        100    Covered              
+    covered/total bins:                                    17         17                      
+    missing/total bins:                                     0         17                      
+    % Hit:                                            100.00%        100                      
+    Coverpoint mem_cg::cp_operation                   100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin read                                        60604          1    Covered              
+        bin write                                      104310          1    Covered              
+    Coverpoint mem_cg::cp_addr                        100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin low                                         59646          1    Covered              
+        bin middle                                     104419          1    Covered              
+        bin high                                          849          1    Covered              
+    Coverpoint mem_cg::cp_addr_edges                  100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin first                                          15          1    Covered              
+        bin last                                           12          1    Covered              
+        default bin others                             164887               Occurred             
+    Coverpoint mem_cg::cp_wdata                       100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin zero                                        19589          1    Covered              
+        bin ones                                        19580          1    Covered              
+        default bin other                               65141               Occurred             
+    Coverpoint mem_cg::cp_rdata                       100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin zero                                          779          1    Covered              
+        bin ones                                        19653          1    Covered              
+        default bin other                               40172               Occurred             
+    Cross mem_cg::cross_op_addr                       100.00%        100    Covered              
+        covered/total bins:                                 6          6                      
+        missing/total bins:                                 0          6                      
+        % Hit:                                        100.00%        100                      
+        bin <read,low>                                  19938          1    Covered              
+        bin <write,low>                                 39708          1    Covered              
+        bin <read,middle>                               40314          1    Covered              
+        bin <write,middle>                              64105          1    Covered              
+        bin <read,high>                                   352          1    Covered              
+        bin <write,high>                                  497          1    Covered              
+ Covergroup instance \/mem_coverage_pkg::mem_coverage::mem_cg  
+                                                      100.00%        100    Covered              
+    covered/total bins:                                    17         17                      
+    missing/total bins:                                     0         17                      
+    % Hit:                                            100.00%        100                      
+    Coverpoint cp_operation                           100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin read                                        60604          1    Covered              
+        bin write                                      104310          1    Covered              
+    Coverpoint cp_addr                                100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin low                                         59646          1    Covered              
+        bin middle                                     104419          1    Covered              
+        bin high                                          849          1    Covered              
+    Coverpoint cp_addr_edges                          100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin first                                          15          1    Covered              
+        bin last                                           12          1    Covered              
+        default bin others                             164887               Occurred             
+    Coverpoint cp_wdata                               100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin zero                                        19589          1    Covered              
+        bin ones                                        19580          1    Covered              
+        default bin other                               65141               Occurred             
+    Coverpoint cp_rdata                               100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin zero                                          779          1    Covered              
+        bin ones                                        19653          1    Covered              
+        default bin other                               40172               Occurred             
+    Cross cross_op_addr                               100.00%        100    Covered              
+        covered/total bins:                                 6          6                      
+        missing/total bins:                                 0          6                      
+        % Hit:                                        100.00%        100                      
+        bin <read,low>                                  19938          1    Covered              
+        bin <write,low>                                 39708          1    Covered              
+        bin <read,middle>                               40314          1    Covered              
+        bin <write,middle>                              64105          1    Covered              
+        bin <read,high>                                   352          1    Covered              
+        bin <write,high>                                  497          1    Covered              
+ TYPE /axi_coverage_pkg/axi_coverage/axi_cvg          100.00%        100    Covered              
+    covered/total bins:                                    44         44                      
+    missing/total bins:                                     0         44                      
+    % Hit:                                            100.00%        100                      
+    Coverpoint axi_cvg::cp_operation                  100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin write                                       50768          1    Covered              
+        bin read                                        27616          1    Covered              
+    Coverpoint axi_cvg::cp_awlen                      100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin single                                      41755          1    Covered              
+        bin short                                        5094          1    Covered              
+        bin medium_len                                   3688          1    Covered              
+        bin long                                           13          1    Covered              
+    Coverpoint axi_cvg::cp_arlen                      100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin single                                      21385          1    Covered              
+        bin short                                        3559          1    Covered              
+        bin medium_len                                   2522          1    Covered              
+        bin long                                           10          1    Covered              
+    Coverpoint axi_cvg::cp_awsize                     100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin word                                        50768          1    Covered              
+    Coverpoint axi_cvg::cp_arsize                     100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin word                                        27616          1    Covered              
+    Coverpoint axi_cvg::cp_awalign                    100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin aligned                                     50768          1    Covered              
+    Coverpoint axi_cvg::cp_aralign                    100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin aligned                                     27616          1    Covered              
+    Coverpoint axi_cvg::cp_bresp                      100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin okay                                        77353          1    Covered              
+        bin slverr                                       1031          1    Covered              
+    Coverpoint axi_cvg::cp_rresp                      100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin okay                                        77453          1    Covered              
+        bin slverr                                        931          1    Covered              
+    Coverpoint axi_cvg::cp_rlast                      100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin last                                        27616          1    Covered              
+        bin not_last                                    50768          1    Covered              
+    Cross axi_cvg::cross_op_write                     100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin <write,single>                              41755          1    Covered              
+        bin <write,medium_len>                           3688          1    Covered              
+        bin <write,short>                                5094          1    Covered              
+        bin <write,long>                                   13          1    Covered              
+        ignore_bin read_bins                                0               ZERO                 
+    Cross axi_cvg::cross_op_read                      100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin <read,single>                               21385          1    Covered              
+        bin <read,medium_len>                            2522          1    Covered              
+        bin <read,short>                                 3559          1    Covered              
+        bin <read,long>                                    10          1    Covered              
+        ignore_bin write_bins                               0               ZERO                 
+    Cross axi_cvg::cross_write_resp                   100.00%        100    Covered              
+        covered/total bins:                                 8          8                      
+        missing/total bins:                                 0          8                      
+        % Hit:                                        100.00%        100                      
+        bin <single,okay>                               41650          1    Covered              
+        bin <short,okay>                                 4711          1    Covered              
+        bin <medium_len,okay>                            3150          1    Covered              
+        bin <long,okay>                                     8          1    Covered              
+        bin <single,slverr>                               105          1    Covered              
+        bin <short,slverr>                                383          1    Covered              
+        bin <medium_len,slverr>                           538          1    Covered              
+        bin <long,slverr>                                   5          1    Covered              
+    Cross axi_cvg::cross_read_resp                    100.00%        100    Covered              
+        covered/total bins:                                 8          8                      
+        missing/total bins:                                 0          8                      
+        % Hit:                                        100.00%        100                      
+        bin <single,okay>                               21265          1    Covered              
+        bin <short,okay>                                 3190          1    Covered              
+        bin <medium_len,okay>                            2089          1    Covered              
+        bin <long,okay>                                     1          1    Covered              
+        bin <single,slverr>                               120          1    Covered              
+        bin <short,slverr>                                369          1    Covered              
+        bin <medium_len,slverr>                           433          1    Covered              
+        bin <long,slverr>                                   9          1    Covered              
+ Covergroup instance \/axi_coverage_pkg::axi_coverage::axi_cvg  
+                                                      100.00%        100    Covered              
+    covered/total bins:                                    44         44                      
+    missing/total bins:                                     0         44                      
+    % Hit:                                            100.00%        100                      
+    Coverpoint cp_operation                           100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin write                                       50768          1    Covered              
+        bin read                                        27616          1    Covered              
+    Coverpoint cp_awlen                               100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin single                                      41755          1    Covered              
+        bin short                                        5094          1    Covered              
+        bin medium_len                                   3688          1    Covered              
+        bin long                                           13          1    Covered              
+    Coverpoint cp_arlen                               100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin single                                      21385          1    Covered              
+        bin short                                        3559          1    Covered              
+        bin medium_len                                   2522          1    Covered              
+        bin long                                           10          1    Covered              
+    Coverpoint cp_awsize                              100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin word                                        50768          1    Covered              
+    Coverpoint cp_arsize                              100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin word                                        27616          1    Covered              
+    Coverpoint cp_awalign                             100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin aligned                                     50768          1    Covered              
+    Coverpoint cp_aralign                             100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin aligned                                     27616          1    Covered              
+    Coverpoint cp_bresp                               100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin okay                                        77353          1    Covered              
+        bin slverr                                       1031          1    Covered              
+    Coverpoint cp_rresp                               100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin okay                                        77453          1    Covered              
+        bin slverr                                        931          1    Covered              
+    Coverpoint cp_rlast                               100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin last                                        27616          1    Covered              
+        bin not_last                                    50768          1    Covered              
+    Cross cross_op_write                              100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin <write,single>                              41755          1    Covered              
+        bin <write,medium_len>                           3688          1    Covered              
+        bin <write,short>                                5094          1    Covered              
+        bin <write,long>                                   13          1    Covered              
+        ignore_bin read_bins                                0               ZERO                 
+    Cross cross_op_read                               100.00%        100    Covered              
+        covered/total bins:                                 4          4                      
+        missing/total bins:                                 0          4                      
+        % Hit:                                        100.00%        100                      
+        bin <read,single>                               21385          1    Covered              
+        bin <read,medium_len>                            2522          1    Covered              
+        bin <read,short>                                 3559          1    Covered              
+        bin <read,long>                                    10          1    Covered              
+        ignore_bin write_bins                               0               ZERO                 
+    Cross cross_write_resp                            100.00%        100    Covered              
+        covered/total bins:                                 8          8                      
+        missing/total bins:                                 0          8                      
+        % Hit:                                        100.00%        100                      
+        bin <single,okay>                               41650          1    Covered              
+        bin <short,okay>                                 4711          1    Covered              
+        bin <medium_len,okay>                            3150          1    Covered              
+        bin <long,okay>                                     8          1    Covered              
+        bin <single,slverr>                               105          1    Covered              
+        bin <short,slverr>                                383          1    Covered              
+        bin <medium_len,slverr>                           538          1    Covered              
+        bin <long,slverr>                                   5          1    Covered              
+    Cross cross_read_resp                             100.00%        100    Covered              
+        covered/total bins:                                 8          8                      
+        missing/total bins:                                 0          8                      
+        % Hit:                                        100.00%        100                      
+        bin <single,okay>                               21265          1    Covered              
+        bin <short,okay>                                 3190          1    Covered              
+        bin <medium_len,okay>                            2089          1    Covered              
+        bin <long,okay>                                     1          1    Covered              
+        bin <single,slverr>                               120          1    Covered              
+        bin <short,slverr>                                369          1    Covered              
+        bin <medium_len,slverr>                           433          1    Covered              
+        bin <long,slverr>                                   9          1    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
+End time: 11:56:32 on Sep 07,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
